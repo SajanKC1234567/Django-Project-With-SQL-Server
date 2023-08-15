@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}{% block footer %}{% endblock footer%}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statements</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/6dc45ef80b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{%static '/css/statement.css'%}">
+
+</head>
+<body>
+   <!-- header section starts  -->
+<header class="header">
+
+    <a href="#" class="logo"> <img src="{% static '/images/Ra.TTsLogo.png'%}" alt=""> </a>
+
+    <div class="icons">
+        <div class="fa-solid fa-bell" id="bell_btn"></div>
+        <!-- <div class="fa-solid fa-cart-shopping" id="cart_btn"></div> -->
+        <div class="fas fa-user" id="User-Profile"></div>
+        <div class="fas fa-bars" id="menu_btn"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="statement.html">Statement</a>
+        <a href="bookinglist.html">Booking Lists</a>
+        <a href="changepassword.html">Change Password</a>
+        <a href="reportproblem.html">Report a Problem</a>
+        <a href="customersupport.html">Customer Support</a>
+        <a href="loginpage/Login.html">Log Out</a>
+    </nav>
+
+    <div action="" class="User-Profile">
+        <img src="imgages/pic-4" alt="">
+        <h2>User Name</h2>
+        <h2>9800000000</h2>
+        <h2>email11@gmail.com</h2>
+    </div>
+
+    <div action="" class="User-Notification">
+        <h2>id: RT001 Successfully flight ticket booked.</h2>
+        <h2>id: RT002 Bus ticket bookings failed.</h2>
+        <h2>id RT003 Your cable car ticket booking is on pending.</h2>
+    </div>
+
+</header>
+<!-- header section ends -->
+<body>
+<!--statement part-->
+<section>
+    <div class="table-container">
+        <h1 class="heading"> Statement</h1>
+        <div class="searchfield">
+            <form onSubmit="searchFunction();">
+                <div class="wrap">
+                  <div class="search">  
+                      <input type="text" class="searchTerm" placeholder="search here...." id="search">
+                      <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                     </button>
+                  </div>
+                </div>
+              </form>
+        </div>
+
+        <table class="table">
+            <thread>
+                <tr>
+                    <th>Id</th>
+                    <th>Address</th>
+                    <th>Remarks</th>
+                    <th>Contact Number</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thread>
+            <tbody>
+            {% for GuideStatement in GuidebookingStatements %}
+                <tr>
+                    <td data-label="Id">RT00{{GuideStatement.id}}</td>
+                    <td data-label="Address">{{GuideStatement.Address}}</td>
+                    <td data-label="Remarks">Thank you for choosing Ra.TTs {{GuideStatement.Username}}.</td>
+                    <td data-label="Contact Number">{{GuideStatement.Phone_Number}}</td>
+                    <td data-label="Payment Method">{{GuideStatement.Payment_Method}}</td>
+                    <td data-label="Amount">Rs.{{GuideStatement.Amount}}</td>
+                    <td data-label="Status">Success</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="{%static '/js/statement.js'%}"></script>
+</body>
+{% endblock content %}

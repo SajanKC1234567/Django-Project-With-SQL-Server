@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}{% block footer %}{% endblock footer%}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide List</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/6dc45ef80b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{%static '/css/touristguides.css'%}">
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <a href="#" class="logo"> <img src="{%static '/images/Ra.TTsLogo.png' %}" alt=""> </a>
+
+        <div class="icons">
+            <div class="fa-solid fa-bell" id="bell_btn"></div>
+            <div class="fas fa-user" id="User-Profile"></div>
+            <div class="fas fa-bars" id="menu_btn"></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="statement.html">Statement</a>
+            <a href="bookinglist.html">Booking Lists</a>
+            <a href="changepassword.html">Change Password</a>
+            <a href="reportproblem.html">Report a Problem</a>
+            <a href="customersupport.html">Customer Support</a>
+            <a href="loginpage/Login.html">Log Out</a>
+        </nav>
+
+        <div action="" class="User-Profile">
+            <img src="imgages/pic-4" alt="">
+            <h2>User Name</h2>
+            <h2>9800000000</h2>
+            <h2>email11@gmail.com</h2>
+        </div>
+
+    </header>
+    <!-- header section ends -->
+    <section class="guidelist" id="guidelist">
+
+        <h1 class="heading">Our Tourist </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/LogoNepalTourGuideTeam.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nepal Tour Guide Team </h3>
+                    <p>Nepal Tour Guide Team is associated with Ra.TTs from more than 10 years who have most experienced tourist guides inside nepal. </p>
+                    <div class="price"> Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/himalayaguide.jpeg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Himalaya Guide Nepal Pvt. ltd.</h3>
+                    <p>Himalaya guide nepal pvt. ltd is associated with Ra.TTs from more than 5 years who have most experienced tourist guides inside nepal.</p>
+                    <div class="price">Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/nepaltravelmate.png' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>nepal travel mate pvt. ltd.</h3>
+                    <p>nepal travel mate pvt. ltd. is associated with Ra.TTs from more than 3 years who have most experienced tourist guides inside nepal.</p>
+                    <div class="price">Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/guide1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Mr. Harka Bahadur Nepali</h3>
+                    <p>Mr. harka bahadur nepali is associated with Ra.TTs from more than 1 years who have most experienced tourist guides inside nepal.</p>
+                    <div class="price">Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/guide2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Mr. ram bahadur majhi</h3>
+                    <p>Mr. ram hahadur majhi is associated with Ra.TTs from more than 2 years who have most experienced tourist guides inside nepal. </p>
+                    <div class="price">Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="{%static '/images/guide3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3> Mr. Shyam Bahadur thankote</h3>
+                    <p>Mr. Shyam Bahadur thankote is associated with Ra.TTs from more than 6 years who have most experienced tourist guides inside nepal.</p>
+                    <div class="price">Rs.1500 per day</div>
+                    <a href="{% url 'Guidebooking' %}" class="btn">book now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+    <script src="{%static '/js/touristguide.js'%}"></script>
+</body>
+
+{% endblock content %}

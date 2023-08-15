@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}{% block footer %}{% endblock footer%}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Comming Soon</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/6dc45ef80b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href = "{%static '/css/commingsoon.css'%}">
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <a href="#" class="logo"> <img src="{%static '/images/Ra.TTsLogo.png'%}" alt=""> </a>
+
+    </header>
+    <!-- header section ends -->
+
+    <section>
+        <div class="mainDiv">
+            <div class="cardStyle">
+                <form class="commingsoon">
+                    <img src="{%static '/images/clock.png'%}" alt="">
+
+                    <h2 class="formTitle">
+                        Comming Soon
+                    </h2>
+                    <a href="{% url 'profile'%}" class="button">
+                        <h4>back to dashboard</h4>
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom js file link  -->
+</body>
+
+{% endblock content %}

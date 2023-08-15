@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="{%static '/css/style.css'%}" />
+    <!-- -------------- Bootstrap 4 added -------------- -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href = "{%static '/css/homepage.css'%}">
+    <!-- custom js file link  -->
+    <link rel="script" type="text/javascript" href = "{%static '/js/homepage.js'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+ {% block content %}
+    {% endblock%}
+<!-- footer section starts  -->
+<!--        {% include 'message.html' %}-->
+    <div class="modal fadeOut" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="animation-delay: 5000000000000000000000000000000s">
+            <div class="modal-content" style="width: 65%; margin-left: 5.5rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="exampleModalLongTitle">Registration Success!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+				{% for message in messages %}
+				<div class="modal-body text-success">{{ message }}</div>
+				{% endfor %}
+                <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+<!--                    <button type="button" class="btn btn-primary">Try Again</button>-->
+                </div>
+            </div>
+        </div>
+</div>
+
+    {% block footer %}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+ {% if messages.count > 0 %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#exampleModalCenter").modal('show')
+});
+</script>
+{% endif %}
+<!--<section class="footer" style="height: 70rem">-->
+
+<!--    <div class="box-container">-->
+
+<!--        <div class="box">-->
+<!--            <h3>quick links</h3>-->
+<!--            <a href="#home">home</a>-->
+<!--            <a href="#about">about</a>-->
+<!--            <a href="#shop">shop</a>-->
+<!--            <a href="#packages">packages</a>-->
+<!--            <a href="#reviews">reviews</a>-->
+<!--            <a href="#blogs">blogs</a>-->
+<!--        </div>-->
+
+<!--        <div class="box">-->
+<!--            <h3>extra links</h3>-->
+<!--            <a href="#">my account</a>-->
+<!--            <a href="#">my order</a>-->
+<!--            <a href="#">my wishlist</a>-->
+<!--            <a href="#">ask questions</a>-->
+<!--            <a href="#">terms of use</a>-->
+<!--            <a href="#">privacy policy</a>-->
+<!--        </div>-->
+
+<!--        <div class="box">-->
+<!--            <h3>contact info</h3>-->
+<!--            <a href="#"> <i class="fas fa-phone"></i> +977-9841577954 </a>-->
+<!--            <a href="#"> <i class="fas fa-phone"></i> +977-9843374415 </a>-->
+<!--            <a href="#"> <i class="fas fa-envelope"></i> sajankhatri2020@gmail.com </a>-->
+<!--            <a href="#"> <i class="fas fa-map"></i> Dhulikhel-8, Kavre, Nepal. </a>-->
+<!--        </div>-->
+
+<!--        <div class="box">-->
+<!--            <h3>follow us</h3>-->
+<!--            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>-->
+<!--            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>-->
+<!--            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>-->
+<!--            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>-->
+<!--            <a href="#"> <i class="fab fa-github"></i> github </a>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--    <div class="credit">Developed by <span>Ms. Sajan KC</span> | All rights reserved!</div>-->
+<!--    <p>&copy; 2022</p>-->
+
+</section>
+
+<!-- footer section ends -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+ {% endblock footer%}
+</body>
+</html>

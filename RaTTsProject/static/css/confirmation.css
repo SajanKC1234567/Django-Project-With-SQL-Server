@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #009ad6;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.2rem solid #270c00;
+    color: #ff9970;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover {
+    background: #ff7b00;
+}
+
+.header a img {
+    vertical-align: middle;
+    border-style: none;
+    height: 14rem;
+    margin-left: 69rem;
+    margin-bottom: -11rem;
+    margin-top: 6rem;
+}
+
+
+/* productpayment */
+
+section {
+    margin-top: 10rem;
+}
+
+section h2 {
+    text-align: center;
+    text-decoration: none;
+    text-shadow: #666;
+    font-size: 4rem;
+    color: #02b7ff;
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+}
+
+section .row .paymentbutton a {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 14px;
+}
+
+section button {
+    background: rgb(46 195 255);
+    width: 30rem;
+    height: 5rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 18.5rem;
+    border-radius: 0.5rem;
+    margin-top: 4.5rem;
+}
+
+.col-25 {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+}
+
+.col-25,
+.col-50 {
+    padding: 0 16px;
+}
+
+.container {
+    padding: 5px 20px 15px 20px;
+    border-radius: 3px;
+    width: 70rem;
+}
+
+.container h4 {
+    font-size: 3rem;
+}
+
+.container p {
+    font-size: 2rem;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 30px;
+}
+
+.btn {
+    background-color: #0090c9;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}

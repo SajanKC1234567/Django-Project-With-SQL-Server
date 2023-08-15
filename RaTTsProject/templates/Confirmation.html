@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}{% block footer %}{% endblock footer%}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/6dc45ef80b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{%static '/css/confirmation.css'%}">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+        <a href="#" class="logo"> <img src="{% static '/images/Ra.TTsLogo.png' %}" alt=""> </a>
+    </header>
+    <!-- header section ends -->
+
+    <section class="productpayment">
+        <h2>Confirmation</h2>
+        <div class="row">
+            <div class="col-25">
+                <div class="container">
+                    <p><a href="#" style="color: rgb(0, 0, 0); font-weight: bold;">Payment for</a> <span class="price">Bag</span></p>
+                    <p><a href="#" style="color: rgb(0, 0, 0); font-weight: bold;">Amount</a> <span class="price">Rs.500</span></p>
+                    <p><a href="#" style="color: rgb(0, 0, 0); font-weight: bold;">Merchant id</a> <span class="price">M0011034654</span></p>
+                    <p><a href="#" style="color: rgb(0, 0, 0); font-weight: bold;">Username</a> <span class="price">Sajan</span></p>
+                    <button class="paymentbutton"><a href="#" class="payment_link">Confirm</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+{% endblock content %}
